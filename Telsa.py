@@ -142,7 +142,7 @@ async def Source_message(bot, update):
 async def stickers(bot, update):
     if msg.sticker:
         await update.reply(f"ID is {msg.sticker.file_id} UNIQUE ID : {msg.sticker.file_unique_id} PACK : {msg.sticker.set_name} EMOJI : {msg.sticker.emoji}  ANIMATED : {msg.sticker.is_animated}", quote=True)
-    elif msg.Document:
+    
     elif msg.video:
         await update.reply(f"TITLE : {msg.video.file_name} SIZE : {huanbytes(msg.video.file_size)} EXTENSION: {msg.video.mime_type} STREAM : {msg.video.supports_streaming}", quote=True)
     else:
