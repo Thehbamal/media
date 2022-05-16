@@ -2,7 +2,7 @@ import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
-from humanbytes import humanbytes
+from humanreadable import humanbytes
 
 HB = Client(
     "MSG_DELETING Bot",
