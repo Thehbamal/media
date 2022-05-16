@@ -137,14 +137,11 @@ async def Source_message(bot, update):
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
-
-@HB.on_message(filters.private & filters.group)
-async def stickers(bot, update):
-    if msg.sticker:
-        await update.reply(f"ID is {msg.sticker.file_id} UNIQUE ID : {msg.sticker.file_unique_id} PACK : {msg.sticker.set_name} EMOJI : {msg.sticker.emoji}  ANIMATED : {msg.sticker.is_animated}", quote=True)
+@HB.on_message(filters.sticker & filters.private)
+async def sticker(bot, update):
+    await update.reply_sticker(message.sticker.file_id)
     
-    elif msg.video:
-        await update.reply(f"TITLE : {msg.video.file_name} SIZE : {huanbytes(msg.video.file_size)} EXTENSION: {msg.video.mime_type} STREAM : {msg.video.supports_streaming}", quote=True)
-    else:
-        await update.reply(f"Your Telegram ID is : {msg.from_user.id}")
+
+
+
 HB.run()
