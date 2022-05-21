@@ -1,1 +1,1 @@
-web: python3 Telsa.py
+worker: python3 Telsa.py
