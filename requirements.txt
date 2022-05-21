@@ -1,2 +1,5 @@
 tgcrypto
 pyrogram==1.2.9
+datetime
+io
+https://github.com/Tinche/aiofiles/archive/master.zip
